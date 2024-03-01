@@ -10,6 +10,7 @@ const createTask = async (req, res) => {
 };
 
 const getAllTasks = async (req, res) => {
+    console.log("im being called");
     try {
         const tasks = await db.Task.findAll();
         res.status(200).send(tasks);
